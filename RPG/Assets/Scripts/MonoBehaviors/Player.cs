@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Player : Character
 {
-    /*
-    
     public void Start()
 	{
 
@@ -13,6 +11,8 @@ public class Player : Character
     {
         if (collision.gameObject.CompareTag("CanBePickedUp"))
         {
+            collision.gameObject.SetActive(false); // TODO: remove
+            /*
             Item hitObject = collision.gameObject.GetComponent<Consumable>().item;
 
             if (hitObject != null)
@@ -29,9 +29,9 @@ public class Player : Character
                     default:
                         break;
                 }
-
                 collision.gameObject.SetActive(false);
             }
+            */
         }
     }
 
@@ -40,6 +40,4 @@ public class Player : Character
         hitPoints = hitPoints + amount;
         print("Adjusted hitpoints by: " + amount + ". New value: " + hitPoints);
     }
-
-    */
 }
